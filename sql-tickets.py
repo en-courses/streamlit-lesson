@@ -87,12 +87,17 @@ def update_ticket(ticket_id, status, priority):
 
 
 
-st.set_page_config(page_title="Support Tickets", page_icon="🎫")
+st.set_page_config(page_title="Support Tickets", page_icon="🎫",layout="wide")
 st.title("🎫 Support Tickets")
 
 # Initialize database
 init_db()
 populate_db()
+
+# Sidebar
+st.sidebar.header('Settings')
+oai_key = st.sidebar.text_input('OpenAI Key')
+oai_endpoint = st.sidebar.text_input('OpenAI Endpoint')
 
 
 # Add a new ticket
