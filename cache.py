@@ -12,7 +12,7 @@ st.subheader('Using st.cache')
 @st.cache_data
 def load_data_a():
   df = pd.DataFrame(
-    np.random.rand(200000, 5),
+    np.random.rand(10000, 5),
     columns=['a', 'b', 'c', 'd', 'e']
   )
   return df
@@ -28,7 +28,7 @@ st.subheader('Not using st.cache')
 
 def load_data_b():
   df = pd.DataFrame(
-    np.random.rand(200000, 5),
+    np.random.rand(10000, 5),
     columns=['a', 'b', 'c', 'd', 'e']
   )
   return df

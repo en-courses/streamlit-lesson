@@ -11,16 +11,16 @@ st.header("3. Now make it interactive 🪄")
 st.write("It's your turn to select a year")
 
 # Using st.selectbox
-#selected_year = st.selectbox("Select a year",
-#                             list(df.year.unique())[::-1])
+selected_year = st.selectbox("Select a year",
+                             list(df.year.unique())[::-1])
 
 # Using st.slider
 #selected_year = st.slider("Select a year", 2010, 2019)
 
 # Using st.number_input
-selected_year = st.number_input("Enter a year",
-                                placeholder="Enter a year from 2010-2019",
-                                value=2019)
+#selected_year = st.number_input("Enter a year",
+ #                               placeholder="Enter a year from 2010-2019",
+ #                               value=2019)
 
 if selected_year:
     df_selected_year = df[df.year == selected_year]
